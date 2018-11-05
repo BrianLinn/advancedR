@@ -1,14 +1,26 @@
 ---
-title: "R Notebook"
+title: "Advanced R Notebook"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+Dejan Sarka - presenter
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+#Introduction to Data Science
+reinforcement learning
+
+https://goo.gl/K9YovT
+
+What is Data Science? Extracting knowledge from data - statistics and programming
+Statistics is a science - data mining and machine learning are more business oriented
+
+Statistics  small <30, medium, >200 < 100K) Large > 100K
+DM - medium
+ML - medium and large
+
+
 
 ```{r}
-plot(cars)
+
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
