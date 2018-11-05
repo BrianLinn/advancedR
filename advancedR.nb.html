@@ -183,16 +183,195 @@ $(document).ready(function () {
 <p><a href="https://goo.gl/K9YovT" class="uri">https://goo.gl/K9YovT</a></p>
 <p>What is Data Science? Extracting knowledge from data - statistics and programming Statistics is a science - data mining and machine learning are more business oriented</p>
 <p>Statistics small &lt;30, medium, &gt;200 &lt; 100K) Large &gt; 100K DM - medium ML - medium and large</p>
+<div id="vectors" class="section level2">
+<h2>Vectors</h2>
+<p>ordered collections of numbers created with c() to concatenate elements or sub-vectors rep() to repeat elements or patterns seq() or m:n to generate sequences</p>
+<p>functions can be applied to vectors without loops use the [] operator to select elements</p>
+</div>
+<div id="packages" class="section level2">
+<h2>Packages</h2>
+<p>packages are stored in library installed.package = installed packages library() list packages in library</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4xKzFcbjIgKyAzICogNFxuMyBeIDNcbnNxcnQoODEpXG5waVxuXG4jQ2hlY2sgYnVpbHQtaW4gY29uc3RhbnRzXG4/P1wiY29uc3RhbnRzXCJcblxuI1NlcXVlbmNlc1xucmVwKDEsIDUpXG5zZXEoNCwgOClcbnNlcSg0LCAyMCwgYnkgPSAzKVxuXG4jQXNzaWdubWVudFxueCA8LSAyXG55IDwtIDNcbnogPC0gNFxuWCArIHkgKyB6ICNlcnJvciBhcyB2YXJpYWJsZXMgYXJlIGNhc2Ugc2Vuc2l0aXZlXG54ICsgeSArIHpcblxuI1ZlY3RvcnNcbnggPC0gYygyLCAwLCAwLCA0KTsgeFxuYXNzaWduKFwieVwiLCBjKDEsIDksIDksIDkpKTsgeVxuYyg1LCA0LCAzLCAyKSA+LSB6OyB6XG5xID0gYygxLCAyLCAzLCA0KTsgcVxuXG5pbnN0YWxsZWQucGFja2FnZXMoKVxuLmxpYlBhdGhzKClcbmluc3RhbGwucGFja2FnZXMoXCJST0RCQ1wiKVxubGlicmFyeShST0RCQylcblxuIyAjIEFkLWhvYyBjb25uZWN0aW9uXG4jIGNvbiA8LSBvZGJjRHJpdmVyQ29ubmVjdCgnZHJpdmVyPXtTUUwgU2VydmVyfTtzZXJ2ZXI9U1FMMjAxN0VJTTtcbiMgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGFiYXNlPUFkdmVudHVyZVdvcmtzRFcyMDE3O3VpZD1SVXNlcjtwd2Q9UGEkJHcwcmQnKVxuIyBcbiMgIyBEU04gY29ubmVjdGlvblxuIyBjb24gPC0gb2RiY0Nvbm5lY3QoXCJBV0RXXCIsIHVpZCA9IFwiUlVzZXJcIiwgcHdkID0gXCJQYSQkdzByZFwiKVxuIyBcbiMgIyBSZWFkIFNRTCBTZXJ2ZXIgZGF0YVxuIyBzcWxRdWVyeShjb24sXG4jICAgICAgICAgIFwiU0VMRUNUIEN1c3RvbWVyS2V5LFxuIyAgICAgICAgICBFbmdsaXNoRWR1Y2F0aW9uIEFTIEVkdWNhdGlvbixcbiMgICAgICAgICAgQWdlLCBOdW1iZXJDYXJzT3duZWQsIEJpa2VCdXllclxuIyAgICAgICAgICBGUk9NIGRiby52VGFyZ2V0TWFpbDtcIilcbiMgY2xvc2UoY29uKVxuYGBgIn0= -->
+<pre class="r"><code>
+1+1
+2 + 3 * 4
+3 ^ 3
+sqrt(81)
+pi
+
+#Check built-in constants
+??&quot;constants&quot;
+
+#Sequences
+rep(1, 5)
+seq(4, 8)
+seq(4, 20, by = 3)
+
+#Assignment
+x &lt;- 2
+y &lt;- 3
+z &lt;- 4
+X + y + z #error as variables are case sensitive
+x + y + z
+
+#Vectors
+x &lt;- c(2, 0, 0, 4); x
+assign(&quot;y&quot;, c(1, 9, 9, 9)); y
+c(5, 4, 3, 2) &gt;- z; z
+q = c(1, 2, 3, 4); q
+
+installed.packages()
+.libPaths()
+install.packages(&quot;RODBC&quot;)
+library(RODBC)
+
+# # Ad-hoc connection
+# con &lt;- odbcDriverConnect('driver={SQL Server};server=SQL2017EIM;
+#                          database=AdventureWorksDW2017;uid=RUser;pwd=Pa$$w0rd')
+# 
+# # DSN connection
+# con &lt;- odbcConnect(&quot;AWDW&quot;, uid = &quot;RUser&quot;, pwd = &quot;Pa$$w0rd&quot;)
+# 
+# # Read SQL Server data
+# sqlQuery(con,
+#          &quot;SELECT CustomerKey,
+#          EnglishEducation AS Education,
+#          Age, NumberCarsOwned, BikeBuyer
+#          FROM dbo.vTargetMail;&quot;)
+# close(con)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
+</div>
+<div id="collections-and-objects" class="section level2">
+<h2>Collections and Objects</h2>
+<div id="matrices-arrays" class="section level3">
+<h3>Matrices (Arrays)</h3>
+<p>-multidimensional generalizations of vectors</p>
+</div>
+<div id="factors" class="section level3">
+<h3>Factors</h3>
+<p>-compact categorical data handling -Can have discrete or coninuous values -Discrete values can be nominal or catgorical when labeling, or ordinal if there is intrinsic order to data -Levels represent distinct values - order must be defined</p>
+</div>
+<div id="lists" class="section level3">
+<h3>Lists</h3>
+<ul>
+<li>ordered collection of different data structures</li>
+</ul>
+</div>
+<div id="data-frames-or-matrix-like-structures" class="section level3">
+<h3>Data Frames or matrix-like structures</h3>
+<p>-Functions</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBNYXRyaXhcbnggPSBjKDEsIDIsIDMsIDQsIDUsIDYpOyB4XG5ZID0gYXJyYXkoeCwgZGltID0gYygyLCAzKSk7IFlcblogPSBtYXRyaXgoeCwgMiwgMywgYnlyb3cgPSBGKTsgWlxuVSA9IG1hdHJpeCh4LCAyLCAzLCBieXJvdyA9IFQpOyBVXG5cbiMgVXNpbmcgZXhwbGljaXQgbmFtZXNcbnJuYW1lcyA9IGMoXCJycnIxXCIsIFwicnJyMlwiKVxuY25hbWVzID0gYyhcImNjYzFcIiwgXCJjY2MyXCIsIFwiY2NjM1wiKVxuViA9IG1hdHJpeCh4LCAyLCAzLCBieXJvdyA9IFQsXG4gICAgICAgICAgIGRpbW5hbWVzID0gbGlzdChybmFtZXMsIGNuYW1lcykpXG5WXG5cbiMgQXJyYXlcbnJuYW1lcyA9IGMoXCJycnIxXCIsIFwicnJyMlwiKVxuY25hbWVzID0gYyhcImNjYzFcIiwgXCJjY2MyXCIsIFwiY2NjM1wiKVxucG5hbWVzID0gYyhcInBwcDFcIiwgXCJwcHAyXCIsIFwicHBwM1wiKVxuWSA9IGFycmF5KDE6MTgsIGRpbSA9IGMoMiwgMywgMyksXG4gICAgICAgICAgZGltbmFtZXMgPSBsaXN0KHJuYW1lcywgY25hbWVzLCBwbmFtZXMpKVxuWVxuXG4jIEZhY3RvclxueCA9IGMoXCJnb29kXCIsIFwibW9kZXJhdGVcIiwgXCJnb29kXCIsIFwiYmFkXCIsIFwiYmFkXCIsIFwiZ29vZFwiKTsgeFxueSA9IGZhY3Rvcih4KTsgeVxueiA9IGZhY3Rvcih4LCBvcmRlciA9IFRSVUUpOyB6XG53ID0gZmFjdG9yKHgsIG9yZGVyID0gVFJVRSxcbiAgICAgICAgICAgbGV2ZWxzID0gYyhcImJhZFwiLCBcIm1vZGVyYXRlXCIsIFwiZ29vZFwiKSk7IHdcblxuIyBMaXN0XG5MID0gbGlzdChuYW1lMSA9IFwiQUJDXCIsIG5hbWUyID0gXCJERUZcIixcbiAgICAgICAgIG5vLmNoaWxkcmVuID0gMiwgY2hpbGRyZW4uYWdlcyA9IGMoMywgNikpXG5MXG5MW1sxXV1cbkxbWzRdXVxuTFtbNF1dWzJdXG5cbiMgRGF0YSBmcmFtZVxuQ2F0ZWdvcnlJZCA9IGMoMSwgMiwgMywgNClcbkNhdGVnb3J5TmFtZSA9IGMoXCJCaWtlc1wiLCBcIkNvbXBvbmVudHNcIiwgXCJDbG90aGluZ1wiLCBcIkFjY2Vzc29yaWVzXCIpXG5Qcm9kdWN0Q2F0ZWdvcmllcyA9IGRhdGEuZnJhbWUoQ2F0ZWdvcnlJZCwgQ2F0ZWdvcnlOYW1lKVxuUHJvZHVjdENhdGVnb3JpZXNcblxubGlicmFyeShST0RCQylcbiMgUmVhZGluZyBpbiBhIGRhdGEgZnJhbWUgZnJvbSBTUUwgU2VydmVyXG4jIGNvbiA8LSBvZGJjQ29ubmVjdChcIkFXRFdcIiwgdWlkID0gXCJSVXNlclwiLCBwd2QgPSBcIlBhJCR3MHJkXCIpXG4jIFRNIDwtXG4jICAgc3FsUXVlcnkoY29uLFxuIyAgICAgICAgICAgIFwiU0VMRUNUIEN1c3RvbWVyS2V5LFxuIyAgICAgICAgICAgICBFbmdsaXNoRWR1Y2F0aW9uIEFTIEVkdWNhdGlvbixcbiMgICAgICAgICAgICAgQWdlLCBOdW1iZXJDYXJzT3duZWQsIEJpa2VCdXllclxuIyAgICAgICAgICAgRlJPTSBkYm8udlRhcmdldE1haWw7XCIpXG4jIGNsb3NlKGNvbilcbiMgaGVhZChUTSwgNSlcbiMgdGFpbChUTSwgNSlcbiMgVE1bMTo1LCAxOjVdXG4jIFRNWzE6NSwgYyhcIkN1c3RvbWVyS2V5XCIsIFwiQmlrZUJ1eWVyXCIpXVxuIyBUTVtUTSRDdXN0b21lcktleSA+PSAyOTQ3OSwgYyhcIkN1c3RvbWVyS2V5XCIsIFwiQmlrZUJ1eWVyXCIpXVxuXG4jICMgQ2hlY2sgdGhlIGNvbXBsZXRlIGRhdGEgZnJhbWVcbiMgVmlldyhUTSlcbiMgXG4jICMgQ3Jvc3N0YWJ1bGF0aW9uIG9mIEJpa2VCdXllciBhbmQgTnVtYmVyQ2Fyc093bmVkXG4jIHRhYmxlKFRNJE51bWJlckNhcnNPd25lZCwgVE0kQmlrZUJ1eWVyKVxuIyBcbiMgIyBEYXRhIHRhYmxlXG4jICMgaW5zdGFsbC5wYWNrYWdlcyhcImRhdGEudGFibGVcIilcbiMgbGlicmFyeShkYXRhLnRhYmxlKVxuIyBcbiMgZHRUTSA8LSBkYXRhLnRhYmxlKFRNKVxuIyBjbGFzcyhkdFRNKVxuIyAjIFNlZSBleHBsaWNpdCByb3cgbnVtYmVyc1xuIyBkdFRNXG4jIFxuIyAjIFZpZXcgd29ya3NcbiMgVmlldyhkdFRNKVxuIyBcbiMgIyBBZ2dyZWdhdGlvblxuIyBkdFRNWywgbWVhbihBZ2UpXVxuIyAjIFRoZSBmb2xsb3dpbmcgbGluZSBkb2VzIG5vdCB3b3JrXG4jIFRNWywgbWVhbihBZ2UpXVxuIyBcbiMgIyBNb3JlIGFnZ3JlZ2F0aW9uc1xuIyBkdFRNWywgLk5dICAgIyBjb3VudHNcbiMgZHRUTVssIC4oQ291bnQ9Lk4pLCBieSA9IE51bWJlckNhcnNPd25lZF1cbiMgZHRUTVssIC4oQXZlcmFnZUFnZT1tZWFuKEFnZSkpLCBieSA9IE51bWJlckNhcnNPd25lZF1cbiMgXG4jICMgRmlsdGVyXG4jIGR0VE1bTnVtYmVyQ2Fyc093bmVkID4gMSwgLihBdmVyYWdlQWdlPW1lYW4oQWdlKSksXG4jICAgICAgYnkgPSBOdW1iZXJDYXJzT3duZWRdXG4jIFxuIyAjIE9yZGVyXG4jIGhlYWQoZHRUTVtvcmRlcigtQ3VzdG9tZXJLZXkpXSwgNSlcblxuYGBgIn0= -->
+<pre class="r"><code># Matrix
+x = c(1, 2, 3, 4, 5, 6); x
+Y = array(x, dim = c(2, 3)); Y
+Z = matrix(x, 2, 3, byrow = F); Z
+U = matrix(x, 2, 3, byrow = T); U
+
+# Using explicit names
+rnames = c(&quot;rrr1&quot;, &quot;rrr2&quot;)
+cnames = c(&quot;ccc1&quot;, &quot;ccc2&quot;, &quot;ccc3&quot;)
+V = matrix(x, 2, 3, byrow = T,
+           dimnames = list(rnames, cnames))
+V
+
+# Array
+rnames = c(&quot;rrr1&quot;, &quot;rrr2&quot;)
+cnames = c(&quot;ccc1&quot;, &quot;ccc2&quot;, &quot;ccc3&quot;)
+pnames = c(&quot;ppp1&quot;, &quot;ppp2&quot;, &quot;ppp3&quot;)
+Y = array(1:18, dim = c(2, 3, 3),
+          dimnames = list(rnames, cnames, pnames))
+Y
+
+# Factor
+x = c(&quot;good&quot;, &quot;moderate&quot;, &quot;good&quot;, &quot;bad&quot;, &quot;bad&quot;, &quot;good&quot;); x
+y = factor(x); y
+z = factor(x, order = TRUE); z
+w = factor(x, order = TRUE,
+           levels = c(&quot;bad&quot;, &quot;moderate&quot;, &quot;good&quot;)); w
+
+# List
+L = list(name1 = &quot;ABC&quot;, name2 = &quot;DEF&quot;,
+         no.children = 2, children.ages = c(3, 6))
+L
+L[[1]]
+L[[4]]
+L[[4]][2]
+
+# Data frame
+CategoryId = c(1, 2, 3, 4)
+CategoryName = c(&quot;Bikes&quot;, &quot;Components&quot;, &quot;Clothing&quot;, &quot;Accessories&quot;)
+ProductCategories = data.frame(CategoryId, CategoryName)
+ProductCategories
+
+library(RODBC)
+# Reading in a data frame from SQL Server
+# con &lt;- odbcConnect(&quot;AWDW&quot;, uid = &quot;RUser&quot;, pwd = &quot;Pa$$w0rd&quot;)
+# TM &lt;-
+#   sqlQuery(con,
+#            &quot;SELECT CustomerKey,
+#             EnglishEducation AS Education,
+#             Age, NumberCarsOwned, BikeBuyer
+#           FROM dbo.vTargetMail;&quot;)
+# close(con)
+# head(TM, 5)
+# tail(TM, 5)
+# TM[1:5, 1:5]
+# TM[1:5, c(&quot;CustomerKey&quot;, &quot;BikeBuyer&quot;)]
+# TM[TM$CustomerKey &gt;= 29479, c(&quot;CustomerKey&quot;, &quot;BikeBuyer&quot;)]
+
+# # Check the complete data frame
+# View(TM)
+# 
+# # Crosstabulation of BikeBuyer and NumberCarsOwned
+# table(TM$NumberCarsOwned, TM$BikeBuyer)
+# 
+# # Data table
+# # install.packages(&quot;data.table&quot;)
+# library(data.table)
+# 
+# dtTM &lt;- data.table(TM)
+# class(dtTM)
+# # See explicit row numbers
+# dtTM
+# 
+# # View works
+# View(dtTM)
+# 
+# # Aggregation
+# dtTM[, mean(Age)]
+# # The following line does not work
+# TM[, mean(Age)]
+# 
+# # More aggregations
+# dtTM[, .N]   # counts
+# dtTM[, .(Count=.N), by = NumberCarsOwned]
+# dtTM[, .(AverageAge=mean(Age)), by = NumberCarsOwned]
+# 
+# # Filter
+# dtTM[NumberCarsOwned &gt; 1, .(AverageAge=mean(Age)),
+#      by = NumberCarsOwned]
+# 
+# # Order
+# head(dtTM[order(-CustomerKey)], 5)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+</div>
+<div id="data-preparation-and-overview" class="section level1">
+<h1>Data Preparation and Overview</h1>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkFkdmFuY2VkIFIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpEZWphbiBTYXJrYSAtIHByZXNlbnRlcg0KDQojSW50cm9kdWN0aW9uIHRvIERhdGEgU2NpZW5jZQ0KcmVpbmZvcmNlbWVudCBsZWFybmluZw0KDQpodHRwczovL2dvby5nbC9LOVlvdlQNCg0KV2hhdCBpcyBEYXRhIFNjaWVuY2U/IEV4dHJhY3Rpbmcga25vd2xlZGdlIGZyb20gZGF0YSAtIHN0YXRpc3RpY3MgYW5kIHByb2dyYW1taW5nDQpTdGF0aXN0aWNzIGlzIGEgc2NpZW5jZSAtIGRhdGEgbWluaW5nIGFuZCBtYWNoaW5lIGxlYXJuaW5nIGFyZSBtb3JlIGJ1c2luZXNzIG9yaWVudGVkDQoNClN0YXRpc3RpY3MgIHNtYWxsIDwzMCwgbWVkaXVtLCA+MjAwIDwgMTAwSykgTGFyZ2UgPiAxMDBLDQpETSAtIG1lZGl1bQ0KTUwgLSBtZWRpdW0gYW5kIGxhcmdlDQoNCg0KDQpgYGB7cn0NCg0KYGBgDQoNCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDdHJsK0FsdCtJKi4NCg0KV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDdHJsK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkFkdmFuY2VkIFIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpEZWphbiBTYXJrYSAtIHByZXNlbnRlcg0KDQojSW50cm9kdWN0aW9uIHRvIERhdGEgU2NpZW5jZQ0KcmVpbmZvcmNlbWVudCBsZWFybmluZw0KDQpodHRwczovL2dvby5nbC9LOVlvdlQNCg0KV2hhdCBpcyBEYXRhIFNjaWVuY2U/IEV4dHJhY3Rpbmcga25vd2xlZGdlIGZyb20gZGF0YSAtIHN0YXRpc3RpY3MgYW5kIHByb2dyYW1taW5nDQpTdGF0aXN0aWNzIGlzIGEgc2NpZW5jZSAtIGRhdGEgbWluaW5nIGFuZCBtYWNoaW5lIGxlYXJuaW5nIGFyZSBtb3JlIGJ1c2luZXNzIG9yaWVudGVkDQoNClN0YXRpc3RpY3MgIHNtYWxsIDwzMCwgbWVkaXVtLCA+MjAwIDwgMTAwSykgTGFyZ2UgPiAxMDBLDQpETSAtIG1lZGl1bQ0KTUwgLSBtZWRpdW0gYW5kIGxhcmdlDQoNCiMjVmVjdG9ycw0Kb3JkZXJlZCBjb2xsZWN0aW9ucyBvZiBudW1iZXJzDQpjcmVhdGVkIHdpdGggYygpIHRvIGNvbmNhdGVuYXRlIGVsZW1lbnRzIG9yIHN1Yi12ZWN0b3JzDQpyZXAoKSB0byByZXBlYXQgZWxlbWVudHMgb3IgcGF0dGVybnMNCnNlcSgpIG9yIG06biB0byBnZW5lcmF0ZSBzZXF1ZW5jZXMNCg0KZnVuY3Rpb25zIGNhbiBiZSBhcHBsaWVkIHRvIHZlY3RvcnMgd2l0aG91dCBsb29wcw0KdXNlIHRoZSBbXSBvcGVyYXRvciB0byBzZWxlY3QgZWxlbWVudHMNCg0KIyNQYWNrYWdlcw0KcGFja2FnZXMgYXJlIHN0b3JlZCBpbiBsaWJyYXJ5DQppbnN0YWxsZWQucGFja2FnZSA9IGluc3RhbGxlZCBwYWNrYWdlcw0KbGlicmFyeSgpIGxpc3QgcGFja2FnZXMgaW4gbGlicmFyeQ0KDQoNCmBgYHtyIGJhc2ljIGV4cHJlc3Npb25zIGFuZCB2YXJpYWJsZXN9DQoNCjErMQ0KMiArIDMgKiA0DQozIF4gMw0Kc3FydCg4MSkNCnBpDQoNCiNDaGVjayBidWlsdC1pbiBjb25zdGFudHMNCj8/ImNvbnN0YW50cyINCg0KI1NlcXVlbmNlcw0KcmVwKDEsIDUpDQpzZXEoNCwgOCkNCnNlcSg0LCAyMCwgYnkgPSAzKQ0KDQojQXNzaWdubWVudA0KeCA8LSAyDQp5IDwtIDMNCnogPC0gNA0KWCArIHkgKyB6ICNlcnJvciBhcyB2YXJpYWJsZXMgYXJlIGNhc2Ugc2Vuc2l0aXZlDQp4ICsgeSArIHoNCg0KI1ZlY3RvcnMNCnggPC0gYygyLCAwLCAwLCA0KTsgeA0KYXNzaWduKCJ5IiwgYygxLCA5LCA5LCA5KSk7IHkNCmMoNSwgNCwgMywgMikgPi0gejsgeg0KcSA9IGMoMSwgMiwgMywgNCk7IHENCg0KaW5zdGFsbGVkLnBhY2thZ2VzKCkNCi5saWJQYXRocygpDQppbnN0YWxsLnBhY2thZ2VzKCJST0RCQyIpDQpsaWJyYXJ5KFJPREJDKQ0KDQojICMgQWQtaG9jIGNvbm5lY3Rpb24NCiMgY29uIDwtIG9kYmNEcml2ZXJDb25uZWN0KCdkcml2ZXI9e1NRTCBTZXJ2ZXJ9O3NlcnZlcj1TUUwyMDE3RUlNOw0KIyAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YWJhc2U9QWR2ZW50dXJlV29ya3NEVzIwMTc7dWlkPVJVc2VyO3B3ZD1QYSQkdzByZCcpDQojIA0KIyAjIERTTiBjb25uZWN0aW9uDQojIGNvbiA8LSBvZGJjQ29ubmVjdCgiQVdEVyIsIHVpZCA9ICJSVXNlciIsIHB3ZCA9ICJQYSQkdzByZCIpDQojIA0KIyAjIFJlYWQgU1FMIFNlcnZlciBkYXRhDQojIHNxbFF1ZXJ5KGNvbiwNCiMgICAgICAgICAgIlNFTEVDVCBDdXN0b21lcktleSwNCiMgICAgICAgICAgRW5nbGlzaEVkdWNhdGlvbiBBUyBFZHVjYXRpb24sDQojICAgICAgICAgIEFnZSwgTnVtYmVyQ2Fyc093bmVkLCBCaWtlQnV5ZXINCiMgICAgICAgICAgRlJPTSBkYm8udlRhcmdldE1haWw7IikNCiMgY2xvc2UoY29uKQ0KYGBgDQoNCiMjQ29sbGVjdGlvbnMgYW5kIE9iamVjdHMNCiMjI01hdHJpY2VzIChBcnJheXMpIA0KICAtbXVsdGlkaW1lbnNpb25hbCBnZW5lcmFsaXphdGlvbnMgb2YgdmVjdG9ycw0KICANCiMjI0ZhY3RvcnMgDQogIC1jb21wYWN0IGNhdGVnb3JpY2FsIGRhdGEgaGFuZGxpbmcNCiAgLUNhbiBoYXZlIGRpc2NyZXRlIG9yIGNvbmludW91cyB2YWx1ZXMNCiAgLURpc2NyZXRlIHZhbHVlcyBjYW4gYmUgbm9taW5hbCBvciBjYXRnb3JpY2FsIHdoZW4gbGFiZWxpbmcsIG9yIG9yZGluYWwgaWYgdGhlcmUgaXMgaW50cmluc2ljIG9yZGVyIHRvIGRhdGENCiAgLUxldmVscyByZXByZXNlbnQgZGlzdGluY3QgdmFsdWVzIC0gb3JkZXIgbXVzdCBiZSBkZWZpbmVkDQogIA0KIyMjTGlzdHMgDQogIC0gb3JkZXJlZCBjb2xsZWN0aW9uIG9mIGRpZmZlcmVudCBkYXRhIHN0cnVjdHVyZXMNCiAgDQojIyNEYXRhIEZyYW1lcyBvciBtYXRyaXgtbGlrZSBzdHJ1Y3R1cmVzDQogIA0KDQotRnVuY3Rpb25zDQoNCg0KYGBge3J9DQojIE1hdHJpeA0KeCA9IGMoMSwgMiwgMywgNCwgNSwgNik7IHgNClkgPSBhcnJheSh4LCBkaW0gPSBjKDIsIDMpKTsgWQ0KWiA9IG1hdHJpeCh4LCAyLCAzLCBieXJvdyA9IEYpOyBaDQpVID0gbWF0cml4KHgsIDIsIDMsIGJ5cm93ID0gVCk7IFUNCg0KIyBVc2luZyBleHBsaWNpdCBuYW1lcw0Kcm5hbWVzID0gYygicnJyMSIsICJycnIyIikNCmNuYW1lcyA9IGMoImNjYzEiLCAiY2NjMiIsICJjY2MzIikNClYgPSBtYXRyaXgoeCwgMiwgMywgYnlyb3cgPSBULA0KICAgICAgICAgICBkaW1uYW1lcyA9IGxpc3Qocm5hbWVzLCBjbmFtZXMpKQ0KVg0KDQojIEFycmF5DQpybmFtZXMgPSBjKCJycnIxIiwgInJycjIiKQ0KY25hbWVzID0gYygiY2NjMSIsICJjY2MyIiwgImNjYzMiKQ0KcG5hbWVzID0gYygicHBwMSIsICJwcHAyIiwgInBwcDMiKQ0KWSA9IGFycmF5KDE6MTgsIGRpbSA9IGMoMiwgMywgMyksDQogICAgICAgICAgZGltbmFtZXMgPSBsaXN0KHJuYW1lcywgY25hbWVzLCBwbmFtZXMpKQ0KWQ0KDQojIEZhY3Rvcg0KeCA9IGMoImdvb2QiLCAibW9kZXJhdGUiLCAiZ29vZCIsICJiYWQiLCAiYmFkIiwgImdvb2QiKTsgeA0KeSA9IGZhY3Rvcih4KTsgeQ0KeiA9IGZhY3Rvcih4LCBvcmRlciA9IFRSVUUpOyB6DQp3ID0gZmFjdG9yKHgsIG9yZGVyID0gVFJVRSwNCiAgICAgICAgICAgbGV2ZWxzID0gYygiYmFkIiwgIm1vZGVyYXRlIiwgImdvb2QiKSk7IHcNCg0KIyBMaXN0DQpMID0gbGlzdChuYW1lMSA9ICJBQkMiLCBuYW1lMiA9ICJERUYiLA0KICAgICAgICAgbm8uY2hpbGRyZW4gPSAyLCBjaGlsZHJlbi5hZ2VzID0gYygzLCA2KSkNCkwNCkxbWzFdXQ0KTFtbNF1dDQpMW1s0XV1bMl0NCg0KIyBEYXRhIGZyYW1lDQpDYXRlZ29yeUlkID0gYygxLCAyLCAzLCA0KQ0KQ2F0ZWdvcnlOYW1lID0gYygiQmlrZXMiLCAiQ29tcG9uZW50cyIsICJDbG90aGluZyIsICJBY2Nlc3NvcmllcyIpDQpQcm9kdWN0Q2F0ZWdvcmllcyA9IGRhdGEuZnJhbWUoQ2F0ZWdvcnlJZCwgQ2F0ZWdvcnlOYW1lKQ0KUHJvZHVjdENhdGVnb3JpZXMNCg0KbGlicmFyeShST0RCQykNCiMgUmVhZGluZyBpbiBhIGRhdGEgZnJhbWUgZnJvbSBTUUwgU2VydmVyDQojIGNvbiA8LSBvZGJjQ29ubmVjdCgiQVdEVyIsIHVpZCA9ICJSVXNlciIsIHB3ZCA9ICJQYSQkdzByZCIpDQojIFRNIDwtDQojICAgc3FsUXVlcnkoY29uLA0KIyAgICAgICAgICAgICJTRUxFQ1QgQ3VzdG9tZXJLZXksDQojICAgICAgICAgICAgIEVuZ2xpc2hFZHVjYXRpb24gQVMgRWR1Y2F0aW9uLA0KIyAgICAgICAgICAgICBBZ2UsIE51bWJlckNhcnNPd25lZCwgQmlrZUJ1eWVyDQojICAgICAgICAgICBGUk9NIGRiby52VGFyZ2V0TWFpbDsiKQ0KIyBjbG9zZShjb24pDQojIGhlYWQoVE0sIDUpDQojIHRhaWwoVE0sIDUpDQojIFRNWzE6NSwgMTo1XQ0KIyBUTVsxOjUsIGMoIkN1c3RvbWVyS2V5IiwgIkJpa2VCdXllciIpXQ0KIyBUTVtUTSRDdXN0b21lcktleSA+PSAyOTQ3OSwgYygiQ3VzdG9tZXJLZXkiLCAiQmlrZUJ1eWVyIildDQoNCiMgIyBDaGVjayB0aGUgY29tcGxldGUgZGF0YSBmcmFtZQ0KIyBWaWV3KFRNKQ0KIyANCiMgIyBDcm9zc3RhYnVsYXRpb24gb2YgQmlrZUJ1eWVyIGFuZCBOdW1iZXJDYXJzT3duZWQNCiMgdGFibGUoVE0kTnVtYmVyQ2Fyc093bmVkLCBUTSRCaWtlQnV5ZXIpDQojIA0KIyAjIERhdGEgdGFibGUNCiMgIyBpbnN0YWxsLnBhY2thZ2VzKCJkYXRhLnRhYmxlIikNCiMgbGlicmFyeShkYXRhLnRhYmxlKQ0KIyANCiMgZHRUTSA8LSBkYXRhLnRhYmxlKFRNKQ0KIyBjbGFzcyhkdFRNKQ0KIyAjIFNlZSBleHBsaWNpdCByb3cgbnVtYmVycw0KIyBkdFRNDQojIA0KIyAjIFZpZXcgd29ya3MNCiMgVmlldyhkdFRNKQ0KIyANCiMgIyBBZ2dyZWdhdGlvbg0KIyBkdFRNWywgbWVhbihBZ2UpXQ0KIyAjIFRoZSBmb2xsb3dpbmcgbGluZSBkb2VzIG5vdCB3b3JrDQojIFRNWywgbWVhbihBZ2UpXQ0KIyANCiMgIyBNb3JlIGFnZ3JlZ2F0aW9ucw0KIyBkdFRNWywgLk5dICAgIyBjb3VudHMNCiMgZHRUTVssIC4oQ291bnQ9Lk4pLCBieSA9IE51bWJlckNhcnNPd25lZF0NCiMgZHRUTVssIC4oQXZlcmFnZUFnZT1tZWFuKEFnZSkpLCBieSA9IE51bWJlckNhcnNPd25lZF0NCiMgDQojICMgRmlsdGVyDQojIGR0VE1bTnVtYmVyQ2Fyc093bmVkID4gMSwgLihBdmVyYWdlQWdlPW1lYW4oQWdlKSksDQojICAgICAgYnkgPSBOdW1iZXJDYXJzT3duZWRdDQojIA0KIyAjIE9yZGVyDQojIGhlYWQoZHRUTVtvcmRlcigtQ3VzdG9tZXJLZXkpXSwgNSkNCg0KYGBgDQoNCg0KI0RhdGEgUHJlcGFyYXRpb24gYW5kIE92ZXJ2aWV3DQo=</div>
 
 
 
